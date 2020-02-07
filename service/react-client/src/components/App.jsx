@@ -68,7 +68,7 @@ class App extends React.Component {
   }
 
   getSongs() {
-    axios.get('http://localhost:3000/initial')
+    axios.get('http://client:3000/initial')
       .then((res) => {
         // console.log(res);
         this.setState({
