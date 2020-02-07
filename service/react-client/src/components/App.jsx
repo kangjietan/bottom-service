@@ -68,7 +68,8 @@ class App extends React.Component {
   }
 
   getSongs() {
-    axios.get('http://client:3000/initial')
+    // Amazon EC2 Instance
+    axios.get('http://13.56.50.57:3000/initial')
       .then((res) => {
         // console.log(res);
         this.setState({
