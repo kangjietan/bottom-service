@@ -28,8 +28,8 @@ app.get('/initial', (req, res) => {
   db.getInitial(callback);
 });
 
-// app.get('/app.js', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../public/bundle.js'));
-// });
+app.get('/bundle.js', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/bundle.js'));
+});
 
 // module.exports = app;
