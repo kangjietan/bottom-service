@@ -418,6 +418,7 @@ const PlayBackContainer = styled.div`
   visibility: hidden;
   position: fixed;
   margin: auto;
+  z-index: 1000;
 `;
 
 const ButtonsContainer = styled.div`
