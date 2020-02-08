@@ -13,7 +13,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "seed": "node database/datawithlinks.js",
-    "seedStart": "npm run seed & npm run start2"
+    "realseed": "node database/realdata.js",
+    "seedStart": "npm run realseed & npm run start2"
   },
   "repository": {
     "type": "git",
