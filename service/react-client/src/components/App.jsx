@@ -150,6 +150,8 @@ class App extends React.Component {
   }
 
   goBack() {
+    // Clear interval for previous song
+    clearInterval(this.check);
     // Go back one from current index
     const { currentIdx, initial, shuffle } = this.state;
     if (currentIdx !== 0) {
@@ -167,6 +169,8 @@ class App extends React.Component {
   }
 
   skip() {
+    // Clear interval for previous song
+    clearInterval(this.check);
     // Go forward one from current index
     const { initial, currentIdx, shuffle } = this.state;
     // If shuffle is true, generate random idx
@@ -321,11 +325,11 @@ const Button = styled.button`
 
 // buttons
 const Back = styled(Button)`
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTcgNmgydjEySDdWNnptMiA2bDggNlY2bC04IDZ6Ii8+PC9zdmc+Cg==");
 `;
 
 const Play = styled(Button)`
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTggNXYxNGwxMS03eiIvPjwvc3ZnPgo=);
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTggNXYxNGwxMS03eiIvPjwvc3ZnPgo=");
 `;
 
 const Pause = styled(Button)`
